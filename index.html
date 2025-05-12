@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Warung Pojok</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #fff;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    padding: 10px 30px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .header-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+  header img {
+    height: 50px;
+  }
+  nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  .hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 35.7%;
+    background: rgba(0, 0, 0, 0.382);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+  .overlay img {
+    max-width: 35%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  .overlay p {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .menu-title {
+    text-align: center;
+    font-weight: 400;
+    font-size: 22px;
+    margin: 55px 0;
+  }
+  .menu-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 60px 0;
+    justify-items: center;
+    padding: 0 40px 30px;
+  }
+  @media (max-width: 1024px) {
+    .menu-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .menu-container {
+      grid-template-columns: 1fr;
+    }
+  }
+  .menu-item {
+    text-align: center;
+  }
+  .menu-item img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .voucher-section {
+    padding: 0 170px 275px;
+    text-align: center;
+    background-color: #fefefe;
+  }
+  .voucher-section h2 {
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 38.2px;
+    color: #000;
+  }
+  .voucher-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 0px;
+    justify-items: center;
+  }
+  .voucher-card {
+    border: 1px solid #bbb;
+    border-radius: 12px;
+    max-width: 300px;
+    width: 100%;
+    background-color: white;
+  }
+  .voucher-text {
+    padding: 20px;
+    text-align: left;
+  }
+  .voucher-text h3 {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0 0 8px;
+    color: #000;
+  }
+  .voucher-text p {
+    font-size: 14px;
+    margin: 0;
+    color: #333;
+  }
+  .voucher-card button {
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-top: 1px solid #ccc;
+    border-radius: 0 0 12px 12px;
+    background-color: #fff;
+    color: black;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .voucher-card button:hover {
+    background-color: #ddd;
+  }
+  .voucher-card button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+  }
+  .footer {
+    background-color: #f0f0f0;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .footer-section {
+    flex: 1;
+    min-width: 200px;
+  }
+  .footer-logo img {
+    height: 65px;
+    margin-bottom: 10px;
+  }
+  .footer-section a {
+    margin-right: 10px;
+    text-decoration: none;
+    color: #333;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="img/logo-warungpojok.png" alt="Logo Warung Pojok">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="pages/profil.html">Profil</a>
+        <a href="#menu">Menu</a>
+        <a href="#kontak">Contact</a>
+        <a href="#voucher">Voucher</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="hero">
+    <img src="img/hero.jpg" alt="Header Warung Pojok">
+    <div class="overlay">
+      <img src="img/logo-warungpojok2.png" alt="Logo Overlay">
+      <p>menyediakan berbagai kuliner<br>khas Kota Cirebon</p>
+    </div>
+  </div>
+
+  <h2 id="menu" class="menu-title">Menu</h2>
+
+  <div class="menu-container">
+    <div class="menu-item">
+      <a href="pages/nasi-jamblang.html"><img src="img/nasi-jamblang.jpg" alt="Nasi Jamblang"></a>
+      <p>Nasi Jamblang</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/tahu-gejrot.html"><img src="img/tahu-gejrot.jpg" alt="Tahu Gejrot"></a>
+      <p>Tahu Gejrot</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/nasi-lengko.html"><img src="img/nasi-lengko.jpg" alt="Nasi Lengko"></a>
+      <p>Nasi Lengko</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/empal-gentong.html"><img src="img/empal-gentong.jpg" alt="Empal Gentong"></a>
+      <p>Empal Gentong</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/ketoprak.html"><img src="img/ketoprak.jpg" alt="Ketoprak"></a>
+      <p>Ketoprak</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/lontong-sayur.html"><img src="img/lontong-sayur.jpg" alt="Lontong Sayur"></a>
+      <p>Lontong Sayur</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/docang.html"><img src="img/docang.jpg" alt="Docang"></a>
+      <p>Docang</p>
+    </div>
+    <div class="menu-item">
+      <a href="pages/mi-koclok.html"><img src="img/mi-koclok.jpg" alt="Mi Koclok"></a>
+      <p>Mi Koclok</p>
+    </div>
+  </div>
+
+  <div id="voucher" class="voucher-section">
+    <h2>Voucher</h2>
+    <div class="voucher-grid">
+      <div class="voucher-card">
+        <div class="voucher-text">
+          <h3>Voucher Diskon 90% s/d 5RB</h3>
+          <p>Berlaku s.d. 30 Mei 2025</p>
+        </div>
+        <button onclick="klaim(this, 'voucher1')">Klaim</button>
+      </div>
+      <div class="voucher-card">
+        <div class="voucher-text">
+          <h3>Voucher Diskon 15% s/d 50RB</h3>
+          <p>Berlaku s.d. 15 Mei 2025</p>
+        </div>
+        <button onclick="klaim(this, 'voucher2')">Klaim</button>
+      </div>
+      <div class="voucher-card">
+        <div class="voucher-text">
+          <h3>Voucher Diskon 60% s/d 15RB</h3>
+          <p>Berlaku hanya untuk hari ini</p>
+        </div>
+        <button onclick="klaim(this, 'voucher3')">Klaim</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="kontak" class="footer">
+    <div class="footer-section footer-logo">
+      <img src="img/logo-warungpojok.png" alt="Logo Footer">
+      <p>Address:<br>Jl. Demokrasi no.45,<br>Kedawung, Cirebon, Jawa Barat</p>
+    </div>
+    <div class="footer-section">
+      <p>Contact Us:<br><br>Email: warungpojok@gmail.com<br>Phone:<br>082128122433<br>081292185106</p>
+    </div>
+    <div class="footer-section">
+      <p>Follow Us:</p>
+      <a href="https://www.instagram.com" target="_blank">
+        <img src="img/instagram.png" alt="Instagram" style="height: 27px; margin-right: 10px;">
+      </a>
+      <a href="https://www.facebook.com" target="_blank">
+        <img src="img/facebook.png" alt="Facebook" style="height: 27px;">
+      </a>
+    </div>
+  </div>
+
+  <script>
+    function klaim(button, id) {
+      button.innerText = "Diklaim";
+      button.disabled = true;
+      localStorage.setItem(id, "claimed");
+    }
+    window.onload = function() {
+      const vouchers = ["voucher1", "voucher2", "voucher3", "voucher4"];
+      vouchers.forEach(id => {
+        const status = localStorage.getItem(id);
+        if (status === "claimed") {
+          const button = document.querySelector(`button[onclick*="${id}"]`);
+          if (button) {
+            button.innerText = "Diklaim";
+            button.disabled = true;
+          }
+        }
+      });
+    };
+  </script>
+</body>
+</html>
